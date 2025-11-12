@@ -6,17 +6,19 @@ pipeline {
       args '--user root -v /var/run/docker.sock:/var/run/docker.sock' // mount Docker socket to access the host's Docker daemon
     }
   }
+
+  stages {
     stage('Cleanup Workspace') {
       steps {
         deleteDir()
+      }
     }
-  }
-  
+
     stage('Checkout') {
       steps {
         git branch: 'main', url: 'https://github.com/fasil3105/Jenkins-Zero-To-Hero'
+      }
     }
-  }
 
     stage('Build and Test') {
       steps {
