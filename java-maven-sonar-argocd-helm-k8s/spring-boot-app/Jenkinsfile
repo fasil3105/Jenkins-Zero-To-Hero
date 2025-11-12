@@ -14,7 +14,7 @@ pipeline {
       }
     }
 
- stage('Checkout') {
+    stage('Checkout') {
       steps {
         sh 'echo passed'
         //git branch: 'main', url: 'https://github.com/fasil3105/Jenkins-Zero-To-Hero.git'
