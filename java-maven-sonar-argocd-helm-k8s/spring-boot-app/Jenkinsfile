@@ -11,8 +11,7 @@ pipeline {
       steps {
         // Clean any previous workspace data
         cleanWs()
-        // Ensure proper permissions
-        sh 'chmod -R 777 /var/lib/jenkins/workspace || true'
+        
       }
     }
 
