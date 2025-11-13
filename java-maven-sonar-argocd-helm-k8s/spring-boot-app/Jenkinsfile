@@ -18,7 +18,8 @@ pipeline {
     stage('Checkout Code') {
       steps {
         // Clone your repo freshly each time
-        git branch: 'main', url: 'https://github.com/fasil3105/Jenkins-Zero-To-Hero.git'
+        sh 'echo passed'
+        // git branch: 'main', url: 'https://github.com/fasil3105/Jenkins-Zero-To-Hero.git'
       }
     }
 
